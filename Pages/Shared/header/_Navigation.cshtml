@@ -1,0 +1,56 @@
+﻿<!--  Navigation -->
+<div class="navigation-search">
+    <!-- Include Navigation -->
+    <nav id="navigation" class="main-navigation singlelevelnav">
+        <ul id="nav_list" class="top-level-nav">
+            <li class="home-link nav-item">
+                <a href="/" class="first-level-link"><span id="nav_home_container" class="ca-gov-icon-home" aria-hidden="true"></span>Home</a>
+            </li>
+
+
+            @{ var rv = ViewContext.RouteData.Values;
+            string page = $"{rv["page"]}".ToLowerInvariant(); }
+
+
+                <li class="nav-item @(page == "/about" ?  "active" : "")">
+                    <a asp-page="/About" class="first-level-link"><span class="ca-gov-icon-info-bubble" aria-hidden="true"></span>About</a>
+                </li>
+
+                <li class="nav-item @(page == "/structure" ?  "active" : "")">
+                    <a asp-page="/Structure" class="first-level-link"><span class="ca-gov-icon-flowchart" aria-hidden="true"></span>Structure</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href = "https://github.com/Office-of-Digital-Innovation" target="_blank" class="first-level-link"><span class="ca-gov-icon-download" aria-hidden="true"></span>Download</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href = "https://webstandards.ca.gov" target="_blank" class="first-level-link"><span class="ca-gov-icon-state" aria-hidden="true"></span>Web Standards</a>
+                </li>
+
+                <li class="nav-item @(page == "/contact" ?  "active" : "")">
+                    <a asp-page="/Contact" class="first-level-link"><span class="ca-gov-icon-contact-us" aria-hidden="true"></span>Contact Us</a>
+                </li>
+
+                <li class="nav-item" id="nav-item-search">
+                    <a href = "javascript:;" class="first-level-link"><span class="ca-gov-icon-search" aria-hidden="true"></span>Search</a>
+                </li>
+
+            </ul>
+        </nav>
+        <div id = "head-search" class="search-container">
+            <script type = "text/javascript" >
+                        var cx = '001779225245372747843:9s-idxui5pk';// Step 7: Update this value with your search engine unique ID. Submit a request to the CDT Service Desk if you don't already know your unique search engine ID.
+                        var gcse = document.createElement('script');
+                gcse.type = 'text/javascript';
+                        gcse.async = true;
+                        gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+                        var s = document.getElementsByTagName('script');
+                s[s.length - 1].parentNode.insertBefore(gcse, s[s.length - 1]);
+                
+
+        </script>
+        <!-- Google Custom Search -->
+        <gcse:searchbox-only resultsUrl="/serp" enableAutoComplete="true"></gcse:searchbox-only>
+</div>
+</div>

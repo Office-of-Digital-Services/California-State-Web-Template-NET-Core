@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9 oldie" lang="en"> <![endif]-->
+<!--[if (gt IE 9)]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<partial name="_head" />
+<body class="two-column">
+    <partial name="_header" />
+    <div id="main-content" class="main-content">
+        @RenderBody()
+    </div>
+    <partial name="_footer" />
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

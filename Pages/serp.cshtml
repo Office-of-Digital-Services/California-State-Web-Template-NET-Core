@@ -1,0 +1,31 @@
+﻿@page
+@model WebTemplateNETCore.Pages.serpModel
+@{
+    ViewData["Title"] = "serp";
+}
+
+<!--Search result section-->
+<div class="banner-main">
+    <div class="container">
+        <h1><span class="home-logo rounded-50x"><i class="ca-gov-icon-search"></i></span>&nbsp;Search Results</h1>
+    </div>
+</div>
+
+
+<div class="section-default">
+    <div class="container search-results-header">
+        <div class="row p-t-lg">
+            <div class="col-11">
+                <gcse:searchbox-only resultsUrl="~/Home/serp" enableAutoComplete="true"></gcse:searchbox-only>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        <h2>Your Search Results:</h2>
+        <gcse:searchresults-only></gcse:searchresults-only>
+    </div>
+
+
+
