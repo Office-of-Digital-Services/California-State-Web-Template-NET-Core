@@ -10,4 +10,4 @@
 
 5 - Modify Pages/Shared/header partial views files to fit your application needs
 
-6 - Reference http://beta.template.webtools.ca.gov/ for working examples
+6 - Reference http://beta.template.webstandards.ca.gov/ for working examples
