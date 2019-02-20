@@ -1,4 +1,4 @@
-# California-State-Template-MVC-v5
+# California-State-Template-.NET-core
 
 The California State Template is a .NET Core template and website standard offered by the California Department of Technology to state agencies and departments within the State of California and beyond. Please visit webstandards.ca.gov for more information.
 
