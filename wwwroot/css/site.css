@@ -16,3 +16,6 @@
     top:5px;
     right:10px;
 }
+td.gsc-search-button::before {
+    top: 8px;
+}
