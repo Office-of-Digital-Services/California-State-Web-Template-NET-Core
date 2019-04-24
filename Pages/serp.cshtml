@@ -5,6 +5,27 @@
 }
 
 <!--Search result section-->
+<!--hiding search icons from search results page navigation sinse the search box is already open-->
+<style>
+    #nav-item-search, .mobile-controls .toggle-search {
+        display: none;
+    }
+
+    .mobile-controls .mobile-header-icons {
+        display: block;
+        height: 61px;
+        width: 100%;
+        cursor: default;
+    }
+    #head-search .container {
+        display: none !important;
+    }
+
+
+    .gs-visibleUrl {
+        color: #185b00 !important;
+    }
+</style>
 <div class="banner-main">
     <div class="container">
         <h1><span class="home-logo rounded-50x"><i class="ca-gov-icon-search"></i></span>&nbsp;Search Results</h1>
@@ -12,20 +33,37 @@
 </div>
 
 
-<div class="section-default">
+<div class="section-default p-b-lg">
     <div class="container search-results-header">
         <div class="row p-t-lg">
             <div class="col-11">
-                <gcse:searchbox-only resultsUrl="~/Home/serp" enableAutoComplete="true"></gcse:searchbox-only>
+                <form id="SearchForm" class="pos-rel" action="/serp">
+                    <label class="sr-only" for="q">Custom Google Search</label>
+                    <input type="text" id="query" name="q" placeholder="Custom Search" class="w-100 height-50 border-0 p-x-sm" />
+                    <button type="submit" class="pos-abs gsc-search-button right-0 top-0 width-50 height-50 border-0"><span class="ca-gov-icon-search font-size-30" aria-hidden="true"></span><span class="sr-only">Submit</span></button>
+                </form>
             </div>
         </div>
     </div>
 </div>
 
-    <div class="container">
-        <h2>Your Search Results:</h2>
-        <gcse:searchresults-only></gcse:searchresults-only>
-    </div>
+<div class="container">
+    <h2>Your Search Results:</h2>
+    <gcse:searchresults-only></gcse:searchresults-only>
+
+    <script>
+        // extracting search query from the url parameter and applying it to the searchbox
+        var query = "";
+        jQuery.urlParam = function (name) {
+            var results = new RegExp('[\?&]' + name + '=([^&#]*)')
+                .exec(window.location.search);
+
+            return (results !== null) ? results[1] || 0 : "";
+        }
+        var query = jQuery.urlParam('q');
+        $('input[name=q]').val(query);
+    </script>
+</div>
 
 
 
