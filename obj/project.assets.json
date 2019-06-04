@@ -12949,11 +12949,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\konstantin.koryaka\\Documents\\projects\\NET-core\\California-State-Template-NET-core\\WebTemplateNETCore.csproj",
+      "projectUniqueName": "C:\\Users\\konstantin.koryaka\\Documents\\projects\\California-State-Template-NET-Core\\California-State-Template-NET-core\\WebTemplateNETCore.csproj",
       "projectName": "WebTemplateNETCore",
-      "projectPath": "C:\\Users\\konstantin.koryaka\\Documents\\projects\\NET-core\\California-State-Template-NET-core\\WebTemplateNETCore.csproj",
+      "projectPath": "C:\\Users\\konstantin.koryaka\\Documents\\projects\\California-State-Template-NET-Core\\California-State-Template-NET-core\\WebTemplateNETCore.csproj",
       "packagesPath": "C:\\Users\\konstantin.koryaka\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\konstantin.koryaka\\Documents\\projects\\NET-core\\California-State-Template-NET-core\\obj\\",
+      "outputPath": "C:\\Users\\konstantin.koryaka\\Documents\\projects\\California-State-Template-NET-Core\\California-State-Template-NET-core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
